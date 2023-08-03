@@ -24,4 +24,4 @@
 	url = https://github.com/nyx-fuzz/qemu-nyx.git
 [submodule "nyx_mode/packer"]
 	path = nyx_mode/packer
-	url = https://github.com/nyx-fuzz/packer.git
+	url = https://github.com/j3s5e4/packer.git
