@@ -105,5 +105,3 @@ utils/persistent_mode/persistent_demo_new
 utils/persistent_mode/test-instr
 utils/plot_ui/afl-plot-ui
 vuln_prog
-nyx_mode/libnyx
-nyx_mode/packer
