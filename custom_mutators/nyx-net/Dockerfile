@@ -97,6 +97,9 @@ RUN mkdir /tmp/in && python3 -c 'open("/tmp/in/i1", "wb").write(b"\n\x12\n\x10aa
 RUN cd /root/AFLplusplus/custom_mutators/nyx-net/echoserver_example/setup_scripts/echoserver/ && \
 	/root/AFLplusplus/afl-clang-fast echoserver.c -o echoserver
 
+RUN cd /root/AFLplusplus/nyx_mode/packer/packer && \
+	python3 nyx_packer.py --nyx_net_debug_mode --purge --nyx_net --nyx_net_port 1234 ~/AFLplusplus/custom_mutators/nyx-net/echoserver_example/setup_scripts/echoserver/echoserver /tmp/echo_packed nyxnet instrumentation
+
 RUN echo "set encoding=utf-8" > /root/.vimrc && \
     echo ". /etc/bash_completion" >> ~/.bashrc && \
     echo 'alias joe="joe --wordwrap --joe_state -nobackup"' >> ~/.bashrc && \
