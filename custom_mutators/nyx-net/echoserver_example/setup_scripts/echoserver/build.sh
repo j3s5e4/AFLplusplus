@@ -1,8 +1,7 @@
-WORKDIR="$PWD/../build/echoserver"
+#!/bin/bash
 
-ROOT=$PWD
-CC=$ROOT/../../../packer/packer/compiler/afl-clang-fast
-CPP=$ROOT/../../../packer/packer/compiler/afl-clang-fast++
+CC=../../../../../afl-clang-fast
+CPP=../../../../../afl-clang-fast++
 
 error () {
   echo "$0: <asan/no_asan>"
@@ -25,12 +24,7 @@ if test -f "$CC" && test -f "$CPP"; then
     ASAN=""
   fi
 
-  rm -rf $WORKDIR
-
-  mkdir $WORKDIR
-
   $CC -m64 echoserver.c -o echoserver && \
-  mv echoserver $WORKDIR && \
   echo "SUCCESS"
 
 else

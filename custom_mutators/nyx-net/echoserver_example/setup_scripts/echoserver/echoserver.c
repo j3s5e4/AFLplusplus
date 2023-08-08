@@ -13,7 +13,7 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 
-#define BUFSIZE 128
+#define BUFSIZE 16
 
 #define PORTNO 1234
 
